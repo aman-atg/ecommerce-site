@@ -3,14 +3,14 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyAK-8rj7QnFIcoUuYEXEMkojY2iRbqXcKM",
-  authDomain: "crwn-designs.firebaseapp.com",
-  databaseURL: "https://crwn-designs.firebaseio.com",
-  projectId: "crwn-designs",
-  storageBucket: "crwn-designs.appspot.com",
-  messagingSenderId: "984176904252",
-  appId: "1:984176904252:web:b0bf763ecea09210389b39",
-  measurementId: "G-72825D0Z6H",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -20,8 +20,11 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   }
 
   const userRef = firestore.doc(`/users/${userAuth.uid}`);
+  // const collectionRef = firebase.collection("users");
 
   const snapShot = await userRef.get();
+  // const collectionSnapshot = await collectionRef.get();
+  // console.log({ collection: collectionSnapshot.docs.map(doc => doc.data()) });
 
   // if user doesn't exists in db ; create
   if (!snapShot.exists) {
