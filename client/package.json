@@ -1,7 +1,6 @@
 {
   "name": "crwn-designs",
   "version": "0.1.0",
-  "proxy": "https://stripe-payment-server.now.sh",
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
