@@ -33,8 +33,8 @@ app.post("/payment", (req, res) => {
     source: req.body.token.id,
     amount: req.body.amount,
     currency: "usd",
+    description: "Ecommerce Business",
   };
-
   stripe.charges.create(body, (stripeErr, stripeRes) => {
     if (stripeErr) {
       res.status(500).send({ error: stripeErr });
