@@ -17,7 +17,15 @@ const StripeCheckoutButton = ({ price }) => {
       token,
     };
     axios
-      .post("https://stripe-payment-server.aman-atg.now.sh", data, config)
+      .post("https://stripe-payment-server.aman-atg.now.sh", {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: {
+          data,
+        },
+      })
       .then(res => alert("Payment Successful"))
       .catch(err => {
         console.log("Payment error: ", err);
