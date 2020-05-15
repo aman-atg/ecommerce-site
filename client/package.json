@@ -2,7 +2,6 @@
   "name": "crwn-designs",
   "version": "0.1.0",
   "private": true,
-  "proxy": "htts://localhost:5000",
   "dependencies": {
     "axios": "^0.19.2",
     "firebase": "^7.14.1",
