@@ -17,7 +17,7 @@ const StripeCheckoutButton = ({ price }) => {
       token,
     };
     axios
-      .post("https://stripe-payment-server.now.sh/payment/", data, config)
+      .post("/payment", data, config)
       .then(res => alert("Payment Successful"))
       .catch(err => {
         console.log("Payment error: ", err);
