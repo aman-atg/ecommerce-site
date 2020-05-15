@@ -2,7 +2,7 @@
   "name": "crwn-designs",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "https://crwn-designs-server.now.sh",
   "dependencies": {
     "axios": "^0.19.2",
     "firebase": "^7.14.1",
