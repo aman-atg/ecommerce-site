@@ -5,11 +5,6 @@ import axios from "axios";
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = "pk_test_r3PDD8GVws0FRHLUnnBwRShP00AdmcRb3n";
-  const config = {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
-  };
 
   const onToken = token => {
     const data = {
@@ -17,14 +12,7 @@ const StripeCheckoutButton = ({ price }) => {
       token,
     };
     axios
-      .post("https://stripe-payment-server.aman-atg.now.sh", data, {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "POST",
-          "Access-Control-Allow-Headers": "Content-Type",
-        },
-      })
+      .post("/payment", data)
       .then(res => alert("Payment Successful"))
       .catch(err => {
         console.log("Payment error: ", err);

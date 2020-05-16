@@ -2,16 +2,18 @@
   "name": "crwn-designs-server",
   "version": "1.0.0",
   "engines": {
-    "node": "12.x",
+    "node": "13.13.0",
     "npm": "6.14.5"
   },
   "description": "Server for crwn-designs.now.sh",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && yarn start",
     "server": "nodemon server.js",
+    "build": "cd client && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node server.js",
-    "build": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "repository": {
     "type": "git",
