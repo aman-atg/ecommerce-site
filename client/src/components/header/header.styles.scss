@@ -6,9 +6,10 @@
   margin-bottom: 25px;
 
   .logo-container {
-    height: 100%;
-    width: 70px;
     padding: 25px;
+    @media screen and (max-width: 800px) {
+      padding: 0;
+    }
   }
 
   .options {
@@ -17,6 +18,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    @media screen and (max-width: 800px) {
+      width: 80%;
+    }
 
     .option {
       padding: 10px 15px;
