@@ -15,7 +15,7 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
-  
+
   &:hover {
     background-color: white;
     color: black;
@@ -41,5 +41,12 @@
       color: white;
       border: none;
     }
+  }
+  @media screen and (max-width: 800px) {
+    // align-items: center;
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
   }
 }
