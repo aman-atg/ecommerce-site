@@ -10,8 +10,9 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js",
+    "setup": "npm install && cd client && npm install",
     "build": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build "
   },
   "repository": {
