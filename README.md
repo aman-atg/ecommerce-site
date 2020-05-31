@@ -7,7 +7,7 @@
 
 **2.** Clone your forked repository to your local system :busts_in_silhouette:
 ```sh
-git clone https://github.com/<your-username>/asteroids-game.git
+git clone https://github.com/<your-username>/ecommerce-site.git
 ```
 Or Download and extract the zip file.
 
