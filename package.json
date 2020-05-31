@@ -11,8 +11,9 @@
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "build": "cd client && npm run build",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js",
+    "setup": "npm install && cd client && npm install",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "repository": {
