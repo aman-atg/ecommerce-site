@@ -21,7 +21,7 @@ Or Download and extract the zip file.
 
 1. Install NPM packages
 ```sh
-npm i or npm install
+npm run setup
 ```
 2. Run 
 ```sh
