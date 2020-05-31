@@ -37,6 +37,8 @@ npm run dev
 * [Exprees.js](https://expressjs.com) - Fast, unopinionated, minimalist web framework for Node.js
 * [Redux](https://redux.js.org/) - A Predictable State Container for JS Apps
 * [Thunk](https://github.com/reduxjs/redux-thunk) - Thunk middleware for Redux
+* [Redux-persist](https://www.npmjs.com/package/redux-persist) - Persist and rehydrate a redux store
+* [React-Router](https://github.com/ReactTraining/react-router) - Declarative routing for React
 * [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
 * [SCSS](https://sass-lang.com) - CSS with superpowers
 * [Stripe-APIs](https://stripe.com/docs/api) - A complete payment platform
@@ -51,4 +53,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Acknowledgments
 
-*
+* [Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)](https://www.udemy.com/course/complete-react-developer-zero-to-mastery)
